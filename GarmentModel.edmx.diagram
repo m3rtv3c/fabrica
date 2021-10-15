@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed87b6736ee84842a5016d5a97b3b187" Name="Diagram1">
+        <EntityTypeShape EntityType="GarmentFactoruModel.Cloth" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.FabricWarehouse" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.Furniture" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.HardwareWarehouse" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.Order" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.OrderedProduct" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.Product" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.ProductAccessories" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GarmentFactoruModel.User" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_FabricWarehouse_Cloth" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_HardwareWarehouse_Furniture" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_ProductAccessories_Furniture" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_Order_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_OrderedProduct_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_OrderedProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.FK_ProductAccessories_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="GarmentFactoruModel.ProductFabrics" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

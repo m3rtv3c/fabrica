@@ -1,0 +1,13 @@
+﻿<Application x:Class="fabrica.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:fabrica"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Window" x:Key="DefaultWindow">
+            <Setter Property="MinHeight" Value="400"></Setter>
+            <Setter Property="MinWidth" Value="800"></Setter>
+
+        </Style>
+    </Application.Resources>
+</Application>
