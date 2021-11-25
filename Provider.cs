@@ -12,13 +12,18 @@ namespace fabrica
     using System;
     using System.Collections.Generic;
     
-    public partial class FabricWarehouse
+    public partial class Provider
     {
-        public int IdRoll { get; set; }
-        public int IdCloth { get; set; }
-        public string Wigth { get; set; }
-        public string Lengh { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Provider()
+        {
+            this.Entrance = new HashSet<Entrance>();
+        }
     
-        public virtual Cloth Cloth { get; set; }
+        public int IdProvider { get; set; }
+        public string NameProvider { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Entrance> Entrance { get; set; }
     }
 }

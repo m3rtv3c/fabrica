@@ -1,0 +1,27 @@
+﻿<Window x:Class="fabrica.StoreKeeper"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fabrica"
+        mc:Ignorable="d"
+        Title="StoreKeeper" Height="450" Width="800"  WindowStartupLocation="CenterScreen" Style="{StaticResource DefaultWindow}" Background="#FFB5D5CA">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Margin="0,0,156.8,0" Source="logo-01.jpg" Stretch="Fill"/>
+        <Label Content="Кладовщик" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"></Label>
+        <Button Name="ButtonCloth" Content="Список тканей" Margin="20" FontSize="16" Grid.Row="1" Click="ButtonCloth_Click" ></Button>
+        <Button Name="ButtonFurniture" Content="Список фурнитуры" Margin="20" FontSize="16" Grid.Row="1" Grid.Column="1" Click="ButtonFurniture_Click" ></Button>
+        <Button Name="ButtonExit" Content="Выход" Margin="20" FontSize="16" Grid.Row="5" Grid.Column="2" Click="ButtonExit_Click"></Button>
+    </Grid>
+</Window>

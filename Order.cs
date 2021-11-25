@@ -17,19 +17,19 @@ namespace fabrica
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            this.OrderedProduct = new HashSet<OrderedProduct>();
+            this.CustomProducts = new HashSet<CustomProducts>();
         }
     
         public int Number { get; set; }
-        public System.DateTime Data { get; set; }
+        public System.DateTime Date { get; set; }
         public string ExecutionStage { get; set; }
-        public string Customer { get; set; }
-        public string Manager { get; set; }
-        public Nullable<double> Cost { get; set; }
+        public string IdCustomer { get; set; }
+        public string IdManager { get; set; }
+        public Nullable<decimal> Cost { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CustomProducts> CustomProducts { get; set; }
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderedProduct> OrderedProduct { get; set; }
     }
 }

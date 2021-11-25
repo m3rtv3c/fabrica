@@ -14,10 +14,10 @@ namespace fabrica
     
     public partial class HardwareWarehouse
     {
-        public string Party { get; set; }
-        public string HardwareArticle { get; set; }
-        public int Quantity { get; set; }
+        public string IdAccessories { get; set; }
+        public int Party { get; set; }
+        public int Count { get; set; }
     
-        public virtual Furniture Furniture { get; set; }
+        public virtual Accessories Accessories { get; set; }
     }
 }

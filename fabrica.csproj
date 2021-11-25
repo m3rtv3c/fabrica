@@ -64,13 +64,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Accessories.cs">
+      <DependentUpon>GarmentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoriesProduct.cs">
+      <DependentUpon>GarmentModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Cloth.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FabricWarehouse.cs">
+    <Compile Include="CustomProducts.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Furniture.cs">
+    <Compile Include="FabricWarehouse.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GarmentModel.Context.cs">
@@ -91,20 +97,36 @@
     <Compile Include="HardwareWarehouse.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Order.cs">
-      <DependentUpon>GarmentModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderedProduct.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductAccessories.cs">
-      <DependentUpon>GarmentModel.tt</DependentUpon>
+    <Compile Include="StoreKeeper.xaml.cs">
+      <DependentUpon>StoreKeeper.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>GarmentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WinBoss.xaml.cs">
+      <DependentUpon>WinBoss.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinCloth.xaml.cs">
+      <DependentUpon>WinCloth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WInCustomer.xaml.cs">
+      <DependentUpon>WInCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinFurniture.xaml.cs">
+      <DependentUpon>WinFurniture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinManager.xaml.cs">
+      <DependentUpon>WinManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinProduct.xaml.cs">
+      <DependentUpon>WinProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinReg.xaml.cs">
       <DependentUpon>WinReg.xaml</DependentUpon>
@@ -121,6 +143,34 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StoreKeeper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinBoss.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinCloth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WInCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinFurniture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

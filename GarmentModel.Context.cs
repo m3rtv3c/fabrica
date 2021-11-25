@@ -13,10 +13,10 @@ namespace fabrica
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GarmentFactoruEntities1 : DbContext
+    public partial class SewingFactoryEntities : DbContext
     {
-        public GarmentFactoruEntities1()
-            : base("name=GarmentFactoruEntities1")
+        public SewingFactoryEntities()
+            : base("name=SewingFactoryEntities")
         {
         }
     
@@ -25,14 +25,14 @@ namespace fabrica
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Accessories> Accessories { get; set; }
+        public virtual DbSet<AccessoriesProduct> AccessoriesProduct { get; set; }
         public virtual DbSet<Cloth> Cloth { get; set; }
+        public virtual DbSet<CustomProducts> CustomProducts { get; set; }
         public virtual DbSet<FabricWarehouse> FabricWarehouse { get; set; }
-        public virtual DbSet<Furniture> Furniture { get; set; }
         public virtual DbSet<HardwareWarehouse> HardwareWarehouse { get; set; }
         public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<OrderedProduct> OrderedProduct { get; set; }
         public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<ProductAccessories> ProductAccessories { get; set; }
         public virtual DbSet<User> User { get; set; }
     }
 }

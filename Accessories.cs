@@ -12,28 +12,27 @@ namespace fabrica
     using System;
     using System.Collections.Generic;
     
-    public partial class Cloth
+    public partial class Accessories
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cloth()
+        public Accessories()
         {
-            this.FabricWarehouse = new HashSet<FabricWarehouse>();
-            this.Product = new HashSet<Product>();
+            this.AccessoriesProduct = new HashSet<AccessoriesProduct>();
+            this.HardwareWarehouse = new HashSet<HardwareWarehouse>();
         }
     
-        public int IdCloth { get; set; }
+        public string IdAccessories { get; set; }
         public string Name { get; set; }
-        public string Color { get; set; }
-        public string Drawing { get; set; }
-        public string Image { get; set; }
-        public string Structure { get; set; }
+        public string Type { get; set; }
         public string Width { get; set; }
         public string Lengh { get; set; }
+        public string Weight { get; set; }
+        public string Image { get; set; }
         public decimal Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FabricWarehouse> FabricWarehouse { get; set; }
+        public virtual ICollection<AccessoriesProduct> AccessoriesProduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<HardwareWarehouse> HardwareWarehouse { get; set; }
     }
 }

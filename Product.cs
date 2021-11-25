@@ -17,20 +17,22 @@ namespace fabrica
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.ProductAccessories = new HashSet<ProductAccessories>();
+            this.AccessoriesProduct = new HashSet<AccessoriesProduct>();
+            this.CustomProducts = new HashSet<CustomProducts>();
             this.Cloth = new HashSet<Cloth>();
         }
     
-        public string ArticleNumber { get; set; }
+        public string IdProduct { get; set; }
         public string Name { get; set; }
-        public int Width { get; set; }
-        public int Length { get; set; }
+        public string Width { get; set; }
+        public string Lengh { get; set; }
         public string Image { get; set; }
-        public string Comment { get; set; }
+        public string Comments { get; set; }
     
-        public virtual OrderedProduct OrderedProduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
+        public virtual ICollection<AccessoriesProduct> AccessoriesProduct { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CustomProducts> CustomProducts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cloth> Cloth { get; set; }
     }

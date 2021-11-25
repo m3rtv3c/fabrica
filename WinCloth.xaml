@@ -1,0 +1,39 @@
+﻿<Window x:Class="fabrica.WinCloth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fabrica"
+        mc:Ignorable="d"
+        Title="WinCloth" Height="450" Width="800"  WindowStartupLocation="CenterScreen" Style="{StaticResource DefaultWindow}" Background="#FFB5D5CA">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Margin="0,0,156.8,0" Source="logo-01.jpg" Stretch="Fill"/>
+        <Label Content="Список ткани" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="20"></Label>
+        <DataGrid Grid.Row="1" Grid.RowSpan="2"  Grid.ColumnSpan="3" Name="DataGridCloth"   AlternatingRowBackground="#D1EEFC" Foreground="Black" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Артикул" Binding="{Binding  Cloth.IdCloth}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Cloth.Name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Cloth.Color}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вышивка" Binding="{Binding Cloth.Drawing}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Структура" Binding="{Binding Cloth.Structure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Ширина" Binding="{Binding Cloth.Width}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Длина" Binding="{Binding Cloth.Lengh}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Cloth.Price}"></DataGridTextColumn>               
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="ButtonExit" Content="Выход" Grid.Column="1" Grid.Row="4" Margin="30" Click="ButtonExit_Click"></Button>
+        
+    </Grid>
+</Window>

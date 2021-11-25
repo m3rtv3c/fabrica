@@ -12,13 +12,17 @@ namespace fabrica
     using System;
     using System.Collections.Generic;
     
-    public partial class FabricWarehouse
+    public partial class AccessoriesProduct
     {
-        public int IdRoll { get; set; }
-        public int IdCloth { get; set; }
-        public string Wigth { get; set; }
+        public string IdAccessories { get; set; }
+        public string IdProduct { get; set; }
+        public string Placement { get; set; }
+        public string Width { get; set; }
         public string Lengh { get; set; }
+        public Nullable<int> Turn { get; set; }
+        public int Count { get; set; }
     
-        public virtual Cloth Cloth { get; set; }
+        public virtual Accessories Accessories { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

@@ -36,5 +36,59 @@ namespace fabrica
             winreg.Show();
             this.Close();
         }
+
+        private void ButtonGo_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextBoxLogin.Text) && !string.IsNullOrEmpty(PasswordBoxPassword.Password))
+            {
+                try
+                {
+                    if (TextBoxLogin.Text == Helper.GetContext().User.FirstOrDefault(x => x.Login == TextBoxLogin.Text).Login
+                    && PasswordBoxPassword.Password == Helper.GetContext().User.FirstOrDefault(x => x.Password == PasswordBoxPassword.Password).Password)
+                    {
+                        User user = Helper.GetContext().User.Find(TextBoxLogin.Text);
+                        switch (user.Role)
+                        {
+                            case "Заказчик":
+                                WInCustomer winCustomer = new WInCustomer();
+                                winCustomer.Show();
+                                this.Close();
+                                break;
+                            case "Менеджер":
+                                WinManager winManager = new WinManager();
+                                winManager.Show();
+                                this.Close();
+                                break;
+                            case "Директор":
+                                WinBoss winDirector = new WinBoss();
+                                winDirector.Show();
+                                this.Close();
+                                break;
+                            case "Кладовщик":
+                               StoreKeeper winStorekeeper = new StoreKeeper();
+                                winStorekeeper.Show();
+                                this.Close();
+                                break;
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Авторизация не успешна. Не верны логин или пароль", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Авторизация не успешна. Не верны логин или пароль", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void buttonzaglyshka_Click(object sender, RoutedEventArgs e)
+        {
+            WinCloth wincloth = new WinCloth();
+            wincloth.Show();
+            this.Close();
+        }
     }
 }
+

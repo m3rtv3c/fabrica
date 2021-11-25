@@ -36,7 +36,7 @@ namespace fabrica
         {
             if (!string.IsNullOrEmpty(TextBoxLogin.Text) && !string.IsNullOrEmpty(PasswordBoxReg.Password) && !string.IsNullOrEmpty(TextBoxName.Text))
             {
-                using (GarmentFactoruEntities1 db = new GarmentFactoruEntities1())
+                using (SewingFactoryEntities db = new SewingFactoryEntities())
                 {
                     User user = new User();
                     user.Login = TextBoxLogin.Text;
@@ -52,7 +52,7 @@ namespace fabrica
             }
             else
             {
-                MessageBox.Show("Регистрация не успешна. Не заполнены поля логина ,пароля или наименования", "Регистрация", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Регистрация не успешна. Не заполнены поля логина, пароля или наименования", "Регистрация", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
