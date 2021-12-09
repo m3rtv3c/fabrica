@@ -22,11 +22,16 @@ namespace fabrica
         public WinFurniture()
         {
             InitializeComponent();
+            var datafur = Helper.GetContext().Accessories.ToList();
+            DataGridFur.ItemsSource = datafur;
+            
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            StoreKeeper store = new StoreKeeper();
+            store.Show();
+            this.Close();
         }
     }
 }

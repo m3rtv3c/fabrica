@@ -21,7 +21,16 @@
         </Grid.RowDefinitions>
         <Image Margin="0,0,156.8,0" Source="logo-01.jpg" Stretch="Fill"/>
         <Label Content="Список изделий" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="20"></Label>
-        <DataGrid Grid.Row="1" Grid.RowSpan="2"  Grid.ColumnSpan="3" Name="DataGridProduct"  AlternatingRowBackground="#D1EEFC" Foreground="Black" BorderBrush="#FFFCD6"></DataGrid>
+        <DataGrid Grid.Row="1" Grid.RowSpan="2"  Grid.ColumnSpan="3" Name="DataGridProd"   AlternatingRowBackground="#D1EEFC" Foreground="Black" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер изделия" Binding="{Binding  IdProduct}" CanUserSort="True" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Ширина" Binding="{Binding Width}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Длина" Binding="{Binding Lengh}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Картинка" Binding="{Binding Structure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Комменты" Binding="{Binding Width}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Name="ButtonExit" Content="Выход" Grid.Column="1" Grid.Row="4" Margin="30" Click="ButtonExit_Click"></Button>
     </Grid>
 </Window>

@@ -28,6 +28,5 @@
         <Label Content="Авторизация" FontSize="18" Grid.Column="1" Margin="77.2,20,69.6,20"></Label>
         <Image Margin="0,0,156.8,0" Source="logo-01.jpg" Stretch="Fill"/>
         <Button Name="ButtonGoReg" Content="Регистрация" Grid.Column="1" Grid.Row="5" Margin="20" Click="ButtonGoReg_Click"></Button>
-        <Button x:Name="buttonzaglyshka" Content="Button" HorizontalAlignment="Left" Margin="130,34,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="buttonzaglyshka_Click"/>
     </Grid>
 </Window>

@@ -27,14 +27,16 @@ namespace fabrica
         private void ButtonIzdelia_Click(object sender, RoutedEventArgs e)
         {
             WinProduct winpro = new WinProduct();
-            winpro.ShowDialog();
+            winpro.zxc = 0;
+            winpro.Show();
+            this.Close();
            
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
-            main.ShowDialog();
+            main.Show();
             this.Close();
         }
     }

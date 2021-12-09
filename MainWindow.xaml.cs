@@ -50,9 +50,7 @@ namespace fabrica
                         switch (user.Role)
                         {
                             case "Заказчик":
-                                WInCustomer winCustomer = new WInCustomer();
-                                winCustomer.Show();
-                                this.Close();
+                                MessageBox.Show("Мы не еще не умеем работать с клиентами", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
                                 break;
                             case "Менеджер":
                                 WinManager winManager = new WinManager();
@@ -83,12 +81,7 @@ namespace fabrica
             }
         }
 
-        private void buttonzaglyshka_Click(object sender, RoutedEventArgs e)
-        {
-            WinCloth wincloth = new WinCloth();
-            wincloth.Show();
-            this.Close();
-        }
+     
     }
 }
 

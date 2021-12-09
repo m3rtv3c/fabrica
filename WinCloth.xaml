@@ -21,16 +21,16 @@
         </Grid.RowDefinitions>
         <Image Margin="0,0,156.8,0" Source="logo-01.jpg" Stretch="Fill"/>
         <Label Content="Список ткани" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Margin="20"></Label>
-        <DataGrid Grid.Row="1" Grid.RowSpan="2"  Grid.ColumnSpan="3" Name="DataGridCloth"   AlternatingRowBackground="#D1EEFC" Foreground="Black" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" Grid.RowSpan="2"  Grid.ColumnSpan="3" Name="DataGridCloth"   AlternatingRowBackground="#D1EEFC" Foreground="Black" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Артикул" Binding="{Binding  Cloth.IdCloth}" CanUserSort="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="Имя" Binding="{Binding Cloth.Name}" ></DataGridTextColumn>
-                <DataGridTextColumn Header="Цвет" Binding="{Binding Cloth.Color}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Вышивка" Binding="{Binding Cloth.Drawing}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Структура" Binding="{Binding Cloth.Structure}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Ширина" Binding="{Binding Cloth.Width}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Длина" Binding="{Binding Cloth.Lengh}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Cloth.Price}"></DataGridTextColumn>               
+                <DataGridTextColumn Header="Артикул" Binding="{Binding  IdCloth}" CanUserSort="True" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Color}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вышивка" Binding="{Binding Drawing}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Структура" Binding="{Binding Structure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Ширина" Binding="{Binding Width}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Длина" Binding="{Binding Lengh}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"></DataGridTextColumn>               
             </DataGrid.Columns>
         </DataGrid>
         <Button Name="ButtonExit" Content="Выход" Grid.Column="1" Grid.Row="4" Margin="30" Click="ButtonExit_Click"></Button>

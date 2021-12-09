@@ -19,14 +19,28 @@ namespace fabrica
     /// </summary>
     public partial class WinProduct : Window
     {
+       public int zxc;
         public WinProduct()
         {
             InitializeComponent();
+            var prod = Helper.GetContext().Product.ToList();
+            DataGridProd.ItemsSource = prod;
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            if (zxc == 0)
+            {
+                WinManager winmanag = new WinManager();
+                winmanag.Show();
+                this.Close();
+            }
+            else
+            {
+                WinBoss winboss = new WinBoss();
+                winboss.Show();
+                this.Close();
+            }
 
         }
     }

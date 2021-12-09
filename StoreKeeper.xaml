@@ -23,5 +23,6 @@
         <Button Name="ButtonCloth" Content="Список тканей" Margin="20" FontSize="16" Grid.Row="1" Click="ButtonCloth_Click" ></Button>
         <Button Name="ButtonFurniture" Content="Список фурнитуры" Margin="20" FontSize="16" Grid.Row="1" Grid.Column="1" Click="ButtonFurniture_Click" ></Button>
         <Button Name="ButtonExit" Content="Выход" Margin="20" FontSize="16" Grid.Row="5" Grid.Column="2" Click="ButtonExit_Click"></Button>
+        <Button Name="ButtonPostup" Content="Поступление материалов" Margin="20" FontSize="16" Grid.Row="1" Grid.Column="2" Click="ButtonPostup_Click"></Button>
     </Grid>
 </Window>

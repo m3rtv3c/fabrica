@@ -34,15 +34,23 @@ namespace fabrica
         private void ButtonCloth_Click(object sender, RoutedEventArgs e)
         {
             WinCloth winCloth = new WinCloth();
-            winCloth.ShowDialog();
-            this.Close();
+            winCloth.Show();
+            this.Hide();
+            
         }
 
         private void ButtonFurniture_Click(object sender, RoutedEventArgs e)
         {
             WinFurniture winfur = new WinFurniture();
-            winfur.ShowDialog();
-            this.Close();
+            winfur.Show();
+         
+            this.Hide();
+           
+        }
+
+        private void ButtonPostup_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Данная функция не готова!", "Готовность", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

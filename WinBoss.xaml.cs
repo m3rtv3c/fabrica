@@ -27,7 +27,9 @@ namespace fabrica
         private void ButtonIzdelia_Click(object sender, RoutedEventArgs e)
         {
             WinProduct winpro = new WinProduct();
-            winpro.ShowDialog();
+            winpro.zxc = 1;
+            winpro.Show();
+            this.Close();
             
         }
 

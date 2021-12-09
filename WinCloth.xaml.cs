@@ -20,16 +20,22 @@ namespace fabrica
     /// </summary>
     public partial class WinCloth : Window
     {
-        List<Cloth> cloth = new List<Cloth>();
+       
         public WinCloth()
         {
             InitializeComponent();
+            var datacloth = Helper.GetContext().Cloth.ToList();
+            DataGridCloth.ItemsSource = datacloth;
            
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            StoreKeeper store = new StoreKeeper();
+            store.Show();
+            this.Close();
+           
+            
         }
     }
 }
